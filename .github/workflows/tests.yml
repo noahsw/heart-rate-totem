@@ -1,0 +1,28 @@
+# Host-side tests for the hardware-free parts of the firmware.
+#
+# Deliberately does NOT build the Arduino sketches. That needs the ESP32 core
+# and several third-party libraries, takes minutes, and would still tell us
+# nothing about whether the display is correct: the bugs that actually
+# happened on this project were perceptual or electrical, found by looking at
+# the panels. This job guards the parts that can be wrong without looking
+# wrong: zone math, the face layouts and LED maps, the shows, the beat drop
+# detector and the phone commands (see tests/Makefile).
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  host-tests:
+    name: Host tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # config.h includes secrets.h, which is gitignored (it holds your strap's
+      # MAC). The Makefile falls back to secrets.h.example, which also means a
+      # broken example file fails the build rather than going unnoticed.
+      - name: Run tests
+        run: make -C tests

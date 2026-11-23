@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "DST=\"$CLAUDE_PROJECT_DIR/firmware/totem/secrets.h\"; for SRC in \"$HOME/.config/heart-rate-totem/secrets.h\" \"$HOME/.config/biohacker_bro/secrets.h\"; do if [ -f \"$SRC\" ]; then if [ -L \"$DST\" ] || [ ! -e \"$DST\" ]; then ln -sfn \"$SRC\" \"$DST\"; fi; break; fi; done; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

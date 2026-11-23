@@ -1,0 +1,11 @@
+.DS_Store
+
+# Your strap's MAC and phone PIN. Copy firmware/totem/secrets.h.example.
+secrets.h
+
+# Build output
+build/
+tests/build/
+
+# Claude Code worktrees
+.claude/worktrees/
