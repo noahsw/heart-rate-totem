@@ -61,3 +61,7 @@ More in [docs/firmware.md](docs/firmware.md).
 ## History
 
 The totem started life in [noahsw/biohacker_bro](https://github.com/noahsw/biohacker_bro), a chest-mounted heart rate display built for a Halloween costume. It grew into its own thing, so it moved here. The full commit history of the firmware up to v1 lives in that repo.
+
+## License
+
+The code (firmware, scripts, phone page) is [MIT](LICENSE). The print files, build guide and images are [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): build one, remix it and share your changes, but not for commercial use without asking. See [LICENSE](LICENSE) for which files are which.
