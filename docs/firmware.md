@@ -82,13 +82,13 @@ If nothing lights, the data wire is probably on the wrong HUB75 pin. The header 
 
 ## Shows (`show_layout.h`)
 
-Every `SHOW_EVERY_MIN` (5) minutes the heart rate steps aside for one show. Three turns go round: the spin, a message, then the Queen Mary, so each comes round every 15 minutes, and each message turn plays the next phrase in `SHOW_PHRASES`.
+Every `SHOW_EVERY_MIN` (5) minutes the heart rate steps aside for one show. Two turns go round, the spin then a message, so each comes round every 10 minutes, and each message turn plays the next phrase in `SHOW_PHRASES`. With `SHOW_SHIP 1` the Queen Mary is a third turn.
 
 - **Spin:** the four faces spin round the ring `SHOW_SPIN_LAPS` (4) times, about 15 seconds, then bump into place and the zone bars flash. `SHOW_TICKER_NUMBERS 1` adds a stock ticker of your and your friend's heart rates racing past between them.
 - **Messages:** the phrase scrolls the whole way round the ring three times in thin 7 px capitals, at a steady 6 columns a second (1 to 2 minutes). One panel is the seam: the letters fade in out of one side of it, its middle stays dark so the crowd can see where the line starts, and they fade out into its other side.
-- **Queen Mary:** a night sea with twinkling stars fades in and a three-funnel liner sails round the ring `SHOW_SHIP_LAPS` (3) times, about 53 seconds, her wake behind her, then fades away. `SHOW_SHIP 0` turns her off.
+- **Queen Mary** (off by default): made for Dreamstate 2026, held right next to the RMS Queen Mary in Long Beach. A night sea with twinkling stars fades in and a three-funnel liner sails round the ring `SHOW_SHIP_LAPS` (3) times, about 53 seconds, her wake behind her, then fades away. `SHOW_SHIP 1` turns her on. The `Ship` struct in `show_layout.h` is the template for an event-specific show of your own.
 
-Settings are section 7 of `totem_config.h`. `SHOW_TEST_MODE 1` plays every show back to back with 4 seconds of heart rate between. Each show runs at one steady brightness, worked out at its start from its brightest frame so it stays under `LED_MAX_MA`; the Queen Mary instead stays at the heart rate's brightness throughout (working hers out took long enough that she visibly jumped mid-lap). Both need `RING_REVERSE` right: if text or faces jump between panels instead of flowing round, flip it.
+Settings are section 7 of `totem_config.h`. `SHOW_TEST_MODE 1` plays every show back to back with 4 seconds of heart rate between. Each show runs at one steady brightness, worked out at its start from its brightest frame so it stays under `LED_MAX_MA`; the Queen Mary instead stays at the heart rate's brightness throughout (working hers out took long enough that she visibly jumped mid-lap). All of them need `RING_REVERSE` right: if text or faces jump between panels instead of flowing round, flip it.
 
 ## Phone remote
 

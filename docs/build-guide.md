@@ -6,7 +6,7 @@
 
 A glowing ring on a pole that shows your live heart rate to the crowd. Four flexible LED panels wrap round a 3D printed core. A small computer board inside reads your heart rate strap over Bluetooth and draws a beating heart, your BPM and a colour bar on every side.
 
-Every so often it plays a show for the people around you: the faces spin round the ring, a phrase scrolls past, or a ship sails round it. A friend's heart rate can share the ring with yours.
+Every so often it plays a show for the people around you: the faces spin round the ring, or a phrase scrolls past. A friend's heart rate can share the ring with yours.
 
 No soldering. No cutting wires. Everything plugs in or goes under a screw.
 
@@ -62,11 +62,11 @@ The bar fills from left to right as your heart rate climbs. The pixel where you 
 
 ### Shows for the crowd
 
-Every 5 minutes the heart rate steps aside for one show. Three kinds take turns, so each comes round about every 15 minutes:
+Every 5 minutes the heart rate steps aside for one show. The two kinds take turns, so each comes round about every 10 minutes:
 
 - **Spin:** the faces race round the ring four times, like a stock ticker. About 15 seconds.
 - **Phrases:** a line of text, such as WE'RE ALL WE NEED, scrolls round the ring three times. About 1 to 2 minutes. You can write your own phrases.
-- **Queen Mary:** a night sea fades in and a three-funnel ocean liner sails round the ring three times under twinkling stars. About 50 seconds.
+There's also a third show you can turn on: the **Queen Mary**, an ocean liner sailing round the ring under the stars, made for Dreamstate 2026, which was held right next to the RMS Queen Mary. It's a good starting point if you want a show of your own for your own event.
 
 ### Beat drop
 
@@ -356,7 +356,7 @@ All of these are in `firmware/totem/totem_config.h`, except the zones, which are
 | `SHOW_TEST_MODE` | 0 | 1 plays every show back to back, a few seconds apart, so you can see them all. Set it back to 0 for the festival. |
 | `SHOW_EVERY_MIN` | 5 | Minutes between shows. |
 | `SHOW_PHRASES` | 7 phrases | The text that scrolls round. Each in quotes, with a comma after each but the last. Up to 60 characters; letters, digits and `' ! . , ? & -` work. |
-| `SHOW_SHIP` | 1 | 0 takes the Queen Mary out of the show rotation. |
+| `SHOW_SHIP` | 0 | 1 adds the Queen Mary (made for Dreamstate) to the show rotation. |
 | `DROP_ENABLED` | 1 | 0 turns the beat drop off and leaves the microphones unpowered. `DROP_TEST_MODE 1` shows a sound meter instead, so you can check it hears the music. |
 | `LED_MAX_MA` | 1800 | Power limit for the LEDs, in milliamps. 1800 gives about 6.5 to 7 hours on the Anker 537. Higher is brighter but runs out sooner. |
 | `CREW_FACES` | 1 | 0 shows only you on all four sides, even if a friend is connected. |

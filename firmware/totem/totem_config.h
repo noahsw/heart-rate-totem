@@ -205,9 +205,10 @@
 #define HEART_RGB_FRIEND CRGB(130, 0, 255)   // purple
 
 // --- 7. Shows: something for the crowd every 5 minutes ---
-// Every SHOW_EVERY_MIN minutes the heart rate steps aside for one show. Three
-// turns go round (spin, phrase 1, Queen Mary, spin, phrase 2, Queen Mary, ...),
-// so each comes every 15 minutes: the ticker spin (your and your friend's heart
+// Every SHOW_EVERY_MIN minutes the heart rate steps aside for one show. Two
+// turns go round (spin, phrase 1, spin, phrase 2, ...), so each comes every
+// 10 minutes (with SHOW_SHIP 1 the Queen Mary is a third turn, and each comes
+// every 15): the ticker spin (your and your friend's heart
 // rates race round the ring like a stock ticker, with a green or red arrow
 // for how far each moved in the last 10 minutes, or with SHOW_TICKER_NUMBERS 0
 // just the faces spinning round) or one of the phrases below scrolling round
@@ -245,12 +246,14 @@
 #define SHOW_REPEATS 3         // times each phrase comes round, a panel's width apart
 #define SHOW_TEXT_RGB 255, 255, 255      // text colour
 
-// The Queen Mary: the night sea fades in, a three-funnel liner sails round
-// the ring under the stars with her wake behind her, then fades away.
-// About 53 s at 3 laps. She's the third turn, after a phrase. The phone
-// gives her a button of her own.
+// The Queen Mary: made for Dreamstate 2026, which was held right next to the
+// RMS Queen Mary in Long Beach. The night sea fades in, a three-funnel liner
+// sails round the ring under the stars with her wake behind her, then fades
+// away. About 53 s at 3 laps. Off by default; with SHOW_SHIP 1 she's the
+// third turn, after a phrase, and the phone gives her a button of her own.
+// A good starting point for a show of your own for your own event.
 #ifndef SHOW_SHIP
-#define SHOW_SHIP 1            // 0 = no ship
+#define SHOW_SHIP 0            // 1 = add the Queen Mary to the rotation
 #endif
 #define SHOW_SHIP_PX_PER_S 4.0f   // sailing speed, columns a second; 4 = one lap in 16 s
 #define SHOW_SHIP_LAPS 3       // times round the ring before she fades and the heart rate comes back

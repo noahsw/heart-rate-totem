@@ -4,9 +4,11 @@
 
 A glowing ring on a pole that shows your live heart rate to the crowd.
 
-Four flexible LED panels wrap round a 3D printed core. A small ESP32-S3 board inside reads your heart rate strap over Bluetooth and draws a beating heart, your BPM and a zone-coloured bar on every side. Every few minutes it plays a show for the people around you: the faces spin round the ring, a phrase scrolls past, or a little ocean liner sails round under the stars. A friend's heart rate can share the ring with yours, the board's microphones catch the beat drop, and a web page on your phone works as a remote.
+Four flexible LED panels wrap round a 3D printed core. A small ESP32-S3 board inside reads your heart rate strap over Bluetooth and draws a beating heart, your BPM and a zone-coloured bar on every side. Every few minutes it plays a show for the people around you: the faces spin round the ring, or a phrase scrolls past. A friend's heart rate can share the ring with yours, the board's microphones catch the beat drop, and a web page on your phone works as a remote.
 
 **No soldering. No cutting wires.** Everything plugs in or goes under a screw.
+
+See it in action on Instagram: **[@heartratetotem](https://www.instagram.com/heartratetotem/)**.
 
 <br clear="right">
 

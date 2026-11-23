@@ -14,15 +14,16 @@
   Whoop drops out while a friend is live, all four faces show the friend.
 
   SHOWS (faces layout): every 5 minutes the heart rate steps aside for one
-  show, round and round: spin, a message, Queen Mary, so each comes every
-  15 minutes, the messages in order (show_layout.h):
+  show, round and round: spin, then a message, so each comes every 10
+  minutes, the messages in order (show_layout.h):
     - spin: the faces spin round the ring a couple of times, then lock back in
       (SHOW_TICKER_NUMBERS 1 adds a stock ticker of your and your friend's
       heart rates racing past)
     - messages: a phrase scrolls round the ring three times, fading in and
       out of a dark seam on one panel
-    - Queen Mary: a night sea fades in and a three-funnel liner sails
-      round the ring under the stars SHOW_SHIP_LAPS times (SHOW_SHIP 0 turns her off)
+    - Queen Mary (SHOW_SHIP 1, off by default; made for Dreamstate, next to
+      the Queen Mary): a three-funnel liner sails round the ring under the
+      stars SHOW_SHIP_LAPS times, as a third turn
   SHOW_TEST_MODE plays them back to back; SHOWS_ENABLED 0 turns them off.
 
   PHONE (phone_ble.h): a phone page over Bluetooth can scroll your own text,
