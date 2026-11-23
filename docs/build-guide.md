@@ -358,6 +358,7 @@ All of these are in `firmware/totem/totem_config.h`, except the zones, which are
 | `SHOW_PHRASES` | 7 phrases | The text that scrolls round. Each in quotes, with a comma after each but the last. Up to 60 characters; letters, digits and `' ! . , ? & -` work. |
 | `SHOW_SHIP` | 0 | 1 adds the Queen Mary (made for Dreamstate) to the show rotation. |
 | `DROP_ENABLED` | 1 | 0 turns the beat drop off and leaves the microphones unpowered. `DROP_TEST_MODE 1` shows a sound meter instead, so you can check it hears the music. |
+| `MUSIC_BPM` | 1 | 0 turns off the song's BPM readout (untested on a board yet). `MUSIC_TEST_MODE 1` shows only the tracker's guess and confidence. |
 | `LED_MAX_MA` | 1800 | Power limit for the LEDs, in milliamps. 1800 gives about 6.5 to 7 hours on the Anker 537. Higher is brighter but runs out sooner. |
 | `CREW_FACES` | 1 | 0 shows only you on all four sides, even if a friend is connected. |
 | `PHONE_ENABLED` | 1 | 0 turns the phone remote off. |
