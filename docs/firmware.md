@@ -100,7 +100,7 @@ Scroll your own text right away, play the spin or a phrase now, pause the timed 
 
 **How it fits together.** Nothing goes through the internet. The totem advertises itself over Bluetooth as "Totem" and accepts one phone connection. The page is plain HTML served by GitHub Pages; once the phone has loaded it, the browser talks to the totem directly over Web Bluetooth. iPhone Safari has no Web Bluetooth, so use the free **Bluefy** browser.
 
-**Works with no signal.** [`docs/remote/sw.js`](remote/sw.js) is a service worker: it saves the page on the phone on the first visit. With signal, the phone always fetches the latest page and refreshes the saved copy; with none (or no answer within 3 seconds) it shows the saved copy. Festivals often have no cell service, so open the page once before you go. Bluefy lists service workers as supported; test on your phone with airplane mode on.
+**Works with no signal.** [`docs/remote/sw.js`](remote/sw.js) is a service worker: it saves the page on the phone on the first visit. With signal, the phone always fetches the latest page and refreshes the saved copy; with none (or no answer within 3 seconds) it shows the saved copy. Festivals often have no cell service, so open the page once before you go. Tested in Bluefy on an iPhone: it opens with airplane mode on.
 
 **Hosting the page.** This repo's copy is at `https://noahsw.github.io/heart-rate-totem/remote/` once GitHub Pages is on (Settings > Pages > Deploy from a branch > `main`, folder `/docs`). The page works with any totem, so builders can just use that address. If you fork and change the protocol, turn Pages on in your fork the same way and use your own address.
 
