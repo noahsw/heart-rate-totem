@@ -371,6 +371,8 @@ All of these are in `firmware/totem/totem_config.h`, except the zones, which are
 3. In Bluefy, open the remote page: **`noahsw.github.io/heart-rate-totem/remote/`** and bookmark it. Add `?demo` to the end of the address to try the page without a totem.
 4. With the totem on, tap **Connect**, pick **Totem** and type your PIN. The page remembers it.
 
+> **No signal?** The page saves itself on your phone the first time it loads. After that it opens with no internet at all, so open it once at home before you go. To check: open it, close Bluefy, turn on airplane mode, and open it again.
+
 > **Tip:** The totem can connect to 3 Bluetooth devices at once: your strap, one friend's strap and the phone. For more friends, section 6 of `totem_config.h` explains the one setting to change.
 
 If you fork this repo, you can host your own copy of the page: see [firmware.md](firmware.md#phone-remote).
@@ -537,7 +539,7 @@ With the totem on the pole, hold the pole and give the ring a few firm shakes, t
 - [ ] Firmware flashed with `SHOW_TEST_MODE 0` and `TOTEM_ORIENTATION_TEST 0`.
 - [ ] Your strap charged. Whoop: HR Broadcast on.
 - [ ] A friend's strap charged, if you set one up.
-- [ ] Phone remote bookmarked in Bluefy, PIN remembered.
+- [ ] Phone remote bookmarked in Bluefy, PIN remembered, and opened once with signal so it works with none.
 - [ ] Check the festival's rules on poles and totems (height, material, thickness).
 
 ### Before you leave

@@ -15,6 +15,9 @@
   the Web Bluetooth API: nothing goes through GitHub or the internet. iPhone
   Safari has no Web Bluetooth, so open it in the free Bluefy browser.
 
+  sw.js keeps a copy of this page on the phone, so after one visit with
+  signal it opens with none.
+
   Add ?demo to the address to try the page without a totem.
 -->
 <style>
@@ -565,6 +568,11 @@ if (!demo && !navigator.bluetooth) { $('noBluetooth').hidden = false; $('connect
 if (demo) $('title').textContent = 'Totem Remote (demo)';
 renderRecent();
 updateSay();
+
+// Save the page on the phone so it opens with no signal (see sw.js).
+if ('serviceWorker' in navigator && window.isSecureContext) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
 </script>
 </body>
 </html>
